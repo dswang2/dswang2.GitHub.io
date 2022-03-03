@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>a标签</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- table-layout，auto 按内容分配宽度，fixed 尽量平均 -->
+    <style>
+      table {
+        width: 800px;
+        table-layout: auto;
+        border-collapse: collapse;
+        border-spacing: 0px;
+      }
+      td,
+      th {
+        border: 1px solid red;
+      }
+    </style>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>语文</th>
+          <th>数学</th>
+          <th>英语</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>张三什么时候出现</th>
+          <td>34</td>
+          <td>66</td>
+          <td>88</td>
+        </tr>
+        <tr>
+          <th>李四</th>
+          <td>76</td>
+          <td>66999999</td>
+          <td>99</td>
+        </tr>
+        <tr>
+          <th>王五</th>
+          <td>66</td>
+          <td>87</td>
+          <td>76</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>平均分</th>
+          <td>77</td>
+          <td>81</td>
+          <td>56</td>
+        </tr>
+      </tfoot>
+    </table>
+    <img id="tt" src="flowewr.jpg" alt="图片加载错误提示文案" /><br />
+    <img src="http://dabaoku.com/sucai/zhiwulei/hehua/hehua_046.jpg" alt="" />
+    <script>
+      tt.onerror = function () {
+        tt.src = "error.png";
+      };
+    </script>
+    <!-- action 请求地址 -->
+    <!-- method 请求方式 -->
+    <!-- autocomplete 表单自动填充开启 -->
+    <!-- target 提交到哪个页面 -->
+    <!-- form标签必须有type=submit的提交标签，同样是表单提交标签，input submit 标签不能嵌套子标签，button 标签可以嵌套子标签 -->
+    <!-- required 是自带的验证器 -->
+    <form action="/xxx" method="post" autocomplete="on" target="_blank">
+      <input name="account" type="text" required />
+      <input type="button" value="确认" />
+      <button type="submit"><strong>确认</strong></button>
+
+      <input id="username" type="text" />
+      <input type="submit" />
+      <!-- 文本框，在输入过后才能提交 -->
+      <input type="text" required />
+      <input type="color" />
+      <!-- 密码，不显示输入内容 -->
+      <input type="password" />
+      <!-- 单选按钮 ，用相同名称控制只能选一个-->
+      <input name="gender" type="radio" />男
+      <input name="gender" type="radio" />女
+      <!-- 复选框 -->
+      <input type="checkbox" name="hobby" />唱
+      <input type="checkbox" name="hobby" />跳
+      <input type="checkbox" name="hobby" />rap
+      <!-- 上传文件，多个文件加multiple -->
+      <input type="file" multiple />
+    </form>
+    <br />
+    <textarea
+      style="resize: none; width: 50; height: 300px"
+      name="tt"
+      id="xx"
+      cols="30"
+      rows="10"
+    ></textarea>
+    <br />
+    <select name="week" id="ww">
+      <option value="1">周一</option>
+      <option value="2">周二</option>
+    </select>
+    <a href="">完成</a>
+    <br /><br /><br /><br />
+  </body>
+</html>
