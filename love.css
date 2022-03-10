@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#heart {
+  display: inline-block;
+  margin: 100px;
+  position: relative;
+}
+
+#heart.start {
+  animation: heartGo 2s infinite alternate;
+}
+
+@keyframes heartGo {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#heart > .left {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  left: -50px;
+  bottom: 50px;
+  transform: translateX(32px) translateY(32px);
+}
+
+#heart > .right {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  right: -50px;
+  bottom: 50px;
+  transform: translateX(-32px) translateY(32px);
+}
+#heart > .bottom {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  transform: rotate(45deg);
+}
